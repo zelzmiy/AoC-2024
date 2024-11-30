@@ -32,7 +32,6 @@ public static class Debug { // Unity Reference????????
 
         Console.ForegroundColor = color;
         Console.WriteLine(message);
-        Console.ResetColor();
     }
 
     public static void LogWarning(object message) => Log(message, ConsoleColor.Yellow);
@@ -41,6 +40,5 @@ public static class Debug { // Unity Reference????????
     public static void Answer(object message) {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine(message);
-        Console.ResetColor();
     }
 }
