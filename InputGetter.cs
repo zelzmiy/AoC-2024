@@ -24,29 +24,22 @@
     }
 }
 
-
 public static class Debug { // Unity Reference????????
     private const bool debug = true;
-    public static void Log(object message) {
-        if (debug)
-            Console.WriteLine(message);
-    }
-
-    public static void Log(object message, ConsoleColor color) => LogColored(message, color);
-    public static void LogWarning(object message) => LogColored(message, ConsoleColor.Yellow);
-    public static void LogError(object message) => LogColored(message, ConsoleColor.Red);
-
-    public static void LogAnswer(object message) {
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(message);
-        Console.ResetColor();
-    }
-
-    public static void LogColored(object message, ConsoleColor color) {
+    public static void Log(object message, ConsoleColor color = ConsoleColor.White) {
         if (!debug)
             return;
 
         Console.ForegroundColor = color;
+        Console.WriteLine(message);
+        Console.ResetColor();
+    }
+
+    public static void LogWarning(object message) => Log(message, ConsoleColor.Yellow);
+    public static void LogError(object message) => Log(message, ConsoleColor.Red);
+
+    public static void Answer(object message) {
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine(message);
         Console.ResetColor();
     }
