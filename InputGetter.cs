@@ -1,4 +1,7 @@
-﻿public static class InputGetter {
+﻿using System;
+using System.IO;
+
+public static class InputGetter {
     private const string filePath = "inputs.txt";
 
     public static string[] GetStringInputs() => File.ReadAllLines(filePath);
