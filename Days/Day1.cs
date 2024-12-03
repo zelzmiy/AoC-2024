@@ -1,5 +1,5 @@
 public static class Day1 { 
-    public static void day1part1()
+    public static void part1()
     {
         var inputs = InputGetter.GetStringInputs();
         List<int> firstList = [];
@@ -26,7 +26,7 @@ public static class Day1 {
         Debug.Answer(sum);
     }
 
-    public static void day1part2()
+    public static void part2()
     {
         var inputs = InputGetter.GetStringInputs();
         List<int> firstList = [];
